@@ -1,5 +1,7 @@
 import React from "react";
 import Area from "./Area";
+import Education from "./Education";
+import Information from "./Information";
 import Name from "./Name";
 
 function FormCV(){
@@ -9,7 +11,9 @@ function FormCV(){
                 name, Area, information, education, skills, experience
            </p> 
            <Name/>
-            <Area/>
+           <Area/>
+           <Information/>
+           <Education/>
         </div>
     );
 }

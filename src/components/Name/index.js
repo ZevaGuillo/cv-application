@@ -7,11 +7,7 @@ function Name(){
 
     const handleButton = (e)=>{
         e.preventDefault()
-        if(edit){
-            setEdit(false)
-        }else{
-            setEdit(true);
-        }
+        setEdit(!edit)
     }
 
     return (
