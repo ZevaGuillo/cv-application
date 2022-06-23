@@ -3,6 +3,7 @@ import Area from "./Area";
 import Education from "./Education";
 import Information from "./Information";
 import Name from "./Name";
+import Skills from "./Skills";
 
 function FormCV(){
     return (
@@ -11,8 +12,9 @@ function FormCV(){
                 name, Area, information, education, skills, experience
            </p> 
            <Name/>
-           <Area/>
            <Information/>
+           <Area/>
+           <Skills/>
            <Education/>
         </div>
     );

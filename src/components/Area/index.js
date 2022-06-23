@@ -50,27 +50,17 @@ function Area(){
 
 function InputAreaExpertise ({areaName,buttonDelete}){
     const [name, setName] = React.useState(areaName);
-    const [isEdit, setIsEdit] = React.useState(false);
 
 
-    function handleSubmit(e){
-        e.preventDefault();
-        setIsEdit(!isEdit)
-    }
 
     function hanfleOnChangeInput(e){
         setName(e.target.value)
     }
 
     return (
-        <form onSubmit={(e)=>handleSubmit(e)}>
-            {isEdit? 
-                <input type='text' onChange={hanfleOnChangeInput} value={name} required/>
-            :
-                <p>{name}</p>
-            }
+        <form>
+            <input type='text' onChange={hanfleOnChangeInput} value={name} required/>
 
-            <button>{isEdit?'save':'edit'}</button>
             {buttonDelete}
         </form>
     )
