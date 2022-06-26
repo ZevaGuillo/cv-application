@@ -4,3 +4,8 @@
 .name{
   border: 1px solid salmon;
 }
+
+.cv{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
