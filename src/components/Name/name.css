@@ -1,7 +1,15 @@
 .name{
-    padding: 1rem;
-    background-color: wheat;
+    padding-right: 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    grid-column: 1/ 4;
+}
+
+.name form{
+    width: 100%;
+}
+
+.name input {
+    font-size: 2.5rem;
 }

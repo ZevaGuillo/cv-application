@@ -7,7 +7,7 @@ function Area(){
     const [ListAreaExpertise, setListAreaExpertise] = React.useState([
         {
             id: uuidv4(),
-            name: 'Add name of Area'
+            name: ''
         }
     ])
  
@@ -15,7 +15,7 @@ function Area(){
         let concatList = ListAreaExpertise.concat([
             {
                 id: uuidv4(),
-                name: 'New Area'
+                name: ''
             }
         ]);
         setListAreaExpertise(concatList)
@@ -28,9 +28,11 @@ function Area(){
 
     return (
         <div className="area">
-            <h2>Area(s) of expertise</h2>
-            <div>
+            <div className="content-headers">
                 <button onClick={handleAddButton}>add</button>
+            </div>
+            
+            <div>
                 {ListAreaExpertise.map(area => {
                     return (
                         <InputAreaExpertise 
@@ -58,8 +60,8 @@ function InputAreaExpertise ({areaName,buttonDelete}){
     }
 
     return (
-        <form>
-            <input type='text' onChange={hanfleOnChangeInput} value={name} required/>
+        <form className="content-form">
+            <input type='text' onChange={hanfleOnChangeInput} value={name} placeholder="Area" required/>
 
             {buttonDelete}
         </form>

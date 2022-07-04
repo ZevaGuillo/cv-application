@@ -7,7 +7,7 @@ function Experience(){
     const [listExperience, setlistExperience] = React.useState([
         {
             id: uuidv4(),
-            name: 'Job Title...'
+            name: ''
         }
     ])
 
@@ -15,7 +15,7 @@ function Experience(){
         let concatList = listExperience.concat([
             {
                 id: uuidv4(),
-                name: 'New Job...'
+                name: ''
             }
         ]);
         setlistExperience(concatList)
@@ -29,9 +29,11 @@ function Experience(){
 
     return (
         <div className="experience">
-           <h2>Experience</h2>
-           <div>
+            <div className="content-headers">
+                <h2>Experience</h2>
                 <button onClick={handleAddButton}>Add</button>
+            </div>
+           <div>
                 {
                     listExperience.map(expe => {
                         return (
@@ -50,35 +52,21 @@ function Experience(){
 
 function InputEducation({title, buttonDelete}){
     const [jobTitle, setJobTitle] = React.useState(title);
-    const [company, setCompany] = React.useState('Company name...');
-    const [from, setFrom] = React.useState('From...');
-    const [to, setTo] = React.useState('To...');
-    const [description, setDescription] = React.useState('decription...');
+    const [company, setCompany] = React.useState('');
+    const [from, setFrom] = React.useState('');
+    const [to, setTo] = React.useState('');
+    const [description, setDescription] = React.useState('');
 
  
 
     return (
         <form >
-            <label>
-                Job Title:
-                <input type="text" defaultValue={jobTitle} onChange={(e)=>setJobTitle(e.target.value)} required/>
-            </label>
-            <label>
-                Company name:
-                <input type="text" defaultValue={company} onChange={(e)=>setCompany(e.target.value)} required/>
-            </label>
-            <label>
-                From:
-                <input type="text" defaultValue={from} onChange={(e)=>setFrom(e.target.value)} required/>
-            </label>
-            <label>
-                To:
-                <input type="text" defaultValue={to} onChange={(e)=>setTo(e.target.value)} required/>
-            </label>
-            <label>
-                Description
-                <textarea onChange={(e)=>setDescription(e.target.value)} value={description} required/>
-            </label>
+            <input type="text" defaultValue={jobTitle} onChange={(e)=>setJobTitle(e.target.value)} placeholder='Job Title' required/>
+            <input type="text" defaultValue={company} onChange={(e)=>setCompany(e.target.value)} placeholder='Company' required/>
+            <input type="text" defaultValue={from} onChange={(e)=>setFrom(e.target.value)} placeholder='From' required/>
+            <input type="text" defaultValue={to} onChange={(e)=>setTo(e.target.value)} placeholder='To' required/>
+            <textarea onChange={(e)=>setDescription(e.target.value)} value={description} placeholder='Description' required/>
+
             {buttonDelete}
         </form>
     )

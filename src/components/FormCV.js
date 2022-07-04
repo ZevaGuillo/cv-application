@@ -18,17 +18,17 @@ function FormCV(){
                 trigger={() => <button>Print this out!</button>}
                 content={() => componentRef.current}
             />
-           <p>
-                name, Area, information, education, skills, experience
-           </p> 
-           <div className="cv" ref={componentRef}>
-                <Name/>
-                <Information/>
-                <Area/>
-                <Skills/>
-                <Education/>
-                <Experience/>
-           </div>
+            <div className="border">
+                <div className="cv" ref={componentRef}>
+                    <Name/>
+                    <Information/>
+                    <Area/>
+                    <Skills/>
+                    <Education/>
+                    <Experience/>
+                </div>
+            </div>
+           
            
         </div>
     );

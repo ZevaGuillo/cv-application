@@ -1,3 +1,15 @@
-.eduaction{
-    background-color: cadetblue;
+.information{
+    padding-left: 2rem;
+    grid-column: span 3;
+    grid-row-end: span 2;
+}
+.information form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.information input,
+.information textarea{
+    font-size: 1.2rem;
+    resize: none;
 }

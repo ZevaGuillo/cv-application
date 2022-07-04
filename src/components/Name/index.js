@@ -2,15 +2,14 @@ import React from "react";
 import './name.css'
 
 function Name(){
-    const [name, setName] = React.useState('Name');
+    const [name, setName] = React.useState('');
 
 
 
     return (
         <div className="name">
-            <h2>Name</h2>
             <form >
-                <input type='text' onChange={(e)=>setName(e.target.value)} value={name} required/>
+                <input type='text' onChange={(e)=>setName(e.target.value)} value={name} placeholder="Name" required/>
             </form>
         </div>
     );

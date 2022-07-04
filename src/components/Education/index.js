@@ -7,7 +7,7 @@ function Education(){
     const [listEducation, setListEducation] = React.useState([
         {
             id: uuidv4(),
-            degree: 'Degree...'
+            degree: ''
         }
     ])
 
@@ -15,7 +15,7 @@ function Education(){
         let concatList = listEducation.concat([
             {
                 id: uuidv4(),
-                degree: 'New Degree...'
+                degree: ''
             }
         ]);
         setListEducation(concatList)
@@ -29,9 +29,12 @@ function Education(){
 
     return (
         <div className="education">
-           <h2>Education</h2>
-           <div>
+            <div className="content-headers">
+                <h2>Education</h2>
                 <button onClick={handleAddButton}>Add</button>
+            </div>
+           
+           <div>
                 {
                     listEducation.map(edu => {
                         return (
@@ -50,30 +53,19 @@ function Education(){
 
 function InputEducation({degreeS, buttonDelete}){
     const [degree, setDegree] = React.useState(degreeS);
-    const [university, setUniversity] = React.useState('University...');
-    const [from, setFrom] = React.useState('From...');
-    const [to, setTo] = React.useState('To...');
+    const [university, setUniversity] = React.useState('');
+    const [from, setFrom] = React.useState('');
+    const [to, setTo] = React.useState('');
 
  
 
     return (
-        <form >
-            <label>
-                Degree:
-                <input type="text" defaultValue={degree} onChange={(e)=>setDegree(e.target.value)} required/>
-            </label>
-            <label>
-                University:
-                <input type="text" defaultValue={university} onChange={(e)=>setUniversity(e.target.value)} required/>
-            </label>
-            <label>
-                From:
-                <input type="text" defaultValue={from} onChange={(e)=>setFrom(e.target.value)} required/>
-            </label>
-            <label>
-                To:
-                <input type="text" defaultValue={to} onChange={(e)=>setTo(e.target.value)} required/>
-            </label>
+        <form>
+            <input type="text" defaultValue={degree} onChange={(e)=>setDegree(e.target.value)} placeholder='Degree' required/>
+            <input type="text" defaultValue={university} onChange={(e)=>setUniversity(e.target.value)} placeholder='University' required/>
+            <input type="text" defaultValue={from} onChange={(e)=>setFrom(e.target.value)} placeholder='From' required/>
+            <input type="text" defaultValue={to} onChange={(e)=>setTo(e.target.value)} placeholder='To' required/>
+
             {buttonDelete}
         </form>
     )

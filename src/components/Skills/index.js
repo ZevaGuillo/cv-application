@@ -7,7 +7,7 @@ function Skills(){
     const [listSkills, setListSkills] = React.useState([
         {
             id: uuidv4(),
-            name: 'skill..'
+            name: ''
         }
     ])
 
@@ -15,7 +15,7 @@ function Skills(){
         let concatList = listSkills.concat([
             {
                 id: uuidv4(),
-                name: 'New Skill'
+                name: ''
             }
         ]);
         setListSkills(concatList)
@@ -28,8 +28,11 @@ function Skills(){
 
     return (
         <div className="skills">
-            <h2>Skills</h2>
-           <button onClick={handleAddButton}>Add</button>
+            <div className="content-headers">
+                <h2>Skills</h2>
+                <button onClick={handleAddButton}>Add</button>
+            </div>
+            
            {
             listSkills.map(skill => {
                 return (
@@ -49,8 +52,8 @@ function InputSkill({pname, deleteBtn}){
     const [name, setName] = React.useState(pname);
 
     return (
-        <form>
-            <input type='text' onChange={(e)=>setName(e.target.value)} value={name} required/>
+        <form className="content-form">
+            <input type='text' onChange={(e)=>setName(e.target.value)} value={name} placeholder='Skill' required/>
             {deleteBtn}
         </form>
     )

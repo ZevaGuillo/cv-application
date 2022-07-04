@@ -2,30 +2,18 @@ import React from "react";
 import './information.css'
 
 function Information(){
-    const [number, setNumber] = React.useState('Number...');
-    const [email, setEmail] = React.useState('example@example.com');
-    const [description, setDescription] = React.useState('decription...');
+    const [number, setNumber] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [description, setDescription] = React.useState('');
 
     return (
-        <div className="eduaction">
-           <h2>Information</h2>
+        <div className="information">
            <form >
-                <label>
-                    Number
-                    <input type='text' onChange={(e)=>setNumber(e.target.value)} value={number} required/>
-                   
-                </label>
+                <input type='text' onChange={(e)=>setNumber(e.target.value)} value={number} placeholder='Number' required/>
 
-                <label>
-                    Email
-                    <input type='email' onChange={(e)=>setEmail(e.target.value)} value={email} required/>
-                    
-                </label>
+                <input type='email' onChange={(e)=>setEmail(e.target.value)} value={email} placeholder='example@example.com' required/>
 
-                <label>
-                    Description
-                    <textarea onChange={(e)=>setDescription(e.target.value)} value={description} required/>
-                </label>
+                <textarea onChange={(e)=>setDescription(e.target.value)} value={description} placeholder='Decription' required/>
 
            </form> 
            

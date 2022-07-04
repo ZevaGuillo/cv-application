@@ -1,3 +1,13 @@
 .skills{
-    background-color:palegreen;
+    margin-top: 2rem;
+    text-align: left;
+    grid-row: 3;
+    grid-column: span 2;
+    background-color: antiquewhite;
+}
+.skills  button{
+    height: fit-content;
+}
+.skills input{
+    font-size: 1.2rem;
 }

@@ -1,3 +1,9 @@
 .education{
-    background-color: plum;
+    padding-top: 2rem;
+    text-align: left;
+    grid-column: span 2;
+    background-color: antiquewhite;
+}
+.education input{
+    font-size: 1.2rem;
 }
