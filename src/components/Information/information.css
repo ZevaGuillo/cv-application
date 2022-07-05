@@ -1,5 +1,4 @@
 .information{
-    padding-left: 2rem;
     grid-column: span 3;
     grid-row-end: span 2;
 }

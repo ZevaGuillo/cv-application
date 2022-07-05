@@ -46,11 +46,20 @@ h1 span{
 .cv{
   padding: 2rem;
   display: grid;
-  min-width: 21cm;
+  max-width: 21cm;
   margin: 10mm auto;
   grid-template-columns: repeat(6,minmax(3rem,1fr));
 }
 
+@media screen and (max-width: 700px) {
+  .cv {
+    display: flex;
+    flex-direction: column;
+  }
+  .information{
+    padding: 1rem 0;
+  }
+}
 
 .content-headers,
 .content-form{
