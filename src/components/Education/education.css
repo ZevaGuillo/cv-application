@@ -1,9 +1,13 @@
 .education{
-    padding-top: 2rem;
+    padding: 2rem 1rem;
     text-align: left;
     grid-column: span 2;
     background-color: antiquewhite;
 }
 .education input{
     font-size: 1.2rem;
+}
+.education form{
+    background-color: bisque;
+    margin-top: 1rem ;
 }

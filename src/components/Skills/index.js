@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './skills.css';
 
-function Skills(){
+function Skills({activeButton}){
+
+    
     const [listSkills, setListSkills] = React.useState([
         {
             id: uuidv4(),
@@ -30,7 +32,11 @@ function Skills(){
         <div className="skills">
             <div className="content-headers">
                 <h2>Skills</h2>
-                <button onClick={handleAddButton}>Add</button>
+                {
+                    activeButton?
+                    <button onClick={handleAddButton}>add</button>:''
+                }
+                
             </div>
             
            {
@@ -39,7 +45,10 @@ function Skills(){
                     <InputSkill 
                         key={skill.id} 
                         pname={skill.name}
-                        deleteBtn={<button onClick={()=>deleteAreaItem(skill.id)} >Delete</button>}
+                        deleteBtn={
+                            activeButton?
+                            <button onClick={()=>deleteAreaItem(skill.id)} >Delete</button>:''
+                        }
                     />
                 )
             })

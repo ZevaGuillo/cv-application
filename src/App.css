@@ -10,12 +10,14 @@
   gap: 2rem;
 }
 .border{
+  margin: 1rem 5%;
   border: 1px solid black;
 }
 .cv{
   padding: 2rem;
   display: grid;
-  max-width: 230mm;
+  min-width: 21cm;
+  margin: 10mm auto;
   grid-template-columns: repeat(6,minmax(3rem,1fr));
 }
 

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './experience.css'
 
-function Experience(){
+function Experience({activeButton}){
     const [listExperience, setlistExperience] = React.useState([
         {
             id: uuidv4(),
@@ -21,7 +21,7 @@ function Experience(){
         setlistExperience(concatList)
     }
 
-    function deleteEducationItem(id){
+    function deleteExperienceItem(id){
         let aux = listExperience.filter(a => a.id!== id);
         setlistExperience(aux);
     }
@@ -31,7 +31,10 @@ function Experience(){
         <div className="experience">
             <div className="content-headers">
                 <h2>Experience</h2>
-                <button onClick={handleAddButton}>Add</button>
+                {
+                    activeButton?
+                    <button onClick={handleAddButton}>add</button>:''
+                }
             </div>
            <div>
                 {
@@ -40,7 +43,10 @@ function Experience(){
                             <InputEducation 
                                 key={expe.id} 
                                 title={expe.name}
-                                buttonDelete = {<button onClick={()=>deleteEducationItem(expe.id)}>Delete</button>}
+                                buttonDelete = {
+                                    activeButton?
+                                    <button onClick={()=>deleteExperienceItem(expe.id)}>Delete</button>:''
+                                }
                             />
                         )
                     })

@@ -1,5 +1,6 @@
 .skills{
     margin-top: 2rem;
+    padding: 0 1rem;
     text-align: left;
     grid-row: 3;
     grid-column: span 2;

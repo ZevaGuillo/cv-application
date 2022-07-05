@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './education.css';
 
-function Education(){
+function Education({activeButton}){
     const [listEducation, setListEducation] = React.useState([
         {
             id: uuidv4(),
@@ -31,7 +31,10 @@ function Education(){
         <div className="education">
             <div className="content-headers">
                 <h2>Education</h2>
-                <button onClick={handleAddButton}>Add</button>
+                {
+                    activeButton?
+                    <button onClick={handleAddButton}>add</button>:''
+                }
             </div>
            
            <div>
@@ -41,7 +44,10 @@ function Education(){
                             <InputEducation 
                                 key={edu.id} 
                                 degreeS={edu.degree}
-                                buttonDelete = {<button onClick={()=>deleteEducationItem(edu.id)}>Delete</button>}
+                                buttonDelete = {
+                                    activeButton?
+                                    <button onClick={()=>deleteEducationItem(edu.id)}>Delete</button>:''
+                                }
                             />
                         )
                     })
