@@ -33,7 +33,7 @@ function Education({activeButton}){
                 <h2>Education</h2>
                 {
                     activeButton?
-                    <button onClick={handleAddButton}>add</button>:''
+                    <button onClick={handleAddButton}><i class="fas fa-plus"></i></button>:''
                 }
             </div>
            
@@ -46,7 +46,7 @@ function Education({activeButton}){
                                 degreeS={edu.degree}
                                 buttonDelete = {
                                     activeButton?
-                                    <button onClick={()=>deleteEducationItem(edu.id)}>Delete</button>:''
+                                    <button onClick={()=>deleteEducationItem(edu.id)}><i class="fas fa-minus"></i></button>:''
                                 }
                             />
                         )

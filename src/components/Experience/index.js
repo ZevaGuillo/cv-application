@@ -33,7 +33,7 @@ function Experience({activeButton}){
                 <h2>Experience</h2>
                 {
                     activeButton?
-                    <button onClick={handleAddButton}>add</button>:''
+                    <button onClick={handleAddButton}><i class="fas fa-plus"></i></button>:''
                 }
             </div>
            <div>
@@ -45,7 +45,7 @@ function Experience({activeButton}){
                                 title={expe.name}
                                 buttonDelete = {
                                     activeButton?
-                                    <button onClick={()=>deleteExperienceItem(expe.id)}>Delete</button>:''
+                                    <button className="deletebtn" onClick={()=>deleteExperienceItem(expe.id)}><i class="fas fa-minus"></i></button>:''
                                 }
                             />
                         )

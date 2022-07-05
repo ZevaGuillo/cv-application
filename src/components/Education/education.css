@@ -1,13 +1,36 @@
 .education{
-    padding: 2rem 1rem;
+    padding: 1.2rem 1rem;
     text-align: left;
     grid-column: span 2;
-    background-color: antiquewhite;
+    background-color: var(--grey);
+    border-radius: 0 0 var(--radius) var(--radius);
+    color: var(--light);
 }
 .education input{
     font-size: 1.2rem;
+    color: var(--light);
 }
+
+.education input::placeholder{
+    color: var(--lightPlace);
+}
+
 .education form{
-    background-color: bisque;
+    background-color: var(--grey2);
+    border-radius: var(--radius);
     margin-top: 1rem ;
+    padding: 1rem ;
+}
+
+.education button {
+    color: var(--red);
+    background-color: var(--cream);
+    box-shadow: var(--grey2) 3px 3px 0 0;
+}
+
+.education form button {
+    margin-top: .5rem;
+    background-color: var(--red);
+    color: var(--cream);
+    box-shadow: var(--grey) 3px 3px 0 0;
 }

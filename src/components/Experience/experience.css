@@ -9,4 +9,20 @@
 .experience input,
 .experience textarea{
     font-size: 1.2rem;
+    resize:vertical;
+}
+
+.experience form{
+    margin-top: 1rem;
+}
+
+.experience button {
+    color: var(--red);
+    background-color: var(--cream);
+    box-shadow: var(--grey2) 3px 3px 0 0;
+}
+
+.experience .deletebtn{
+    background-color: var(--red);
+    color: var(--cream);
 }

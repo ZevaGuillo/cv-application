@@ -34,7 +34,7 @@ function Skills({activeButton}){
                 <h2>Skills</h2>
                 {
                     activeButton?
-                    <button onClick={handleAddButton}>add</button>:''
+                    <button onClick={handleAddButton}><i class="fas fa-plus"></i></button>:''
                 }
                 
             </div>
@@ -47,7 +47,7 @@ function Skills({activeButton}){
                         pname={skill.name}
                         deleteBtn={
                             activeButton?
-                            <button onClick={()=>deleteAreaItem(skill.id)} >Delete</button>:''
+                            <button className="deletebtn" onClick={()=>deleteAreaItem(skill.id)} ><i class="fas fa-minus"></i></button>:''
                         }
                     />
                 )

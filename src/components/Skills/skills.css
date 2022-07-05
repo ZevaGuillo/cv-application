@@ -1,14 +1,30 @@
 .skills{
     margin-top: 2rem;
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
     text-align: left;
     grid-row: 3;
     grid-column: span 2;
-    background-color: antiquewhite;
+    background-color: var(--grey);
+    border-radius: var(--radius) var(--radius) 0 0 ;
+    color: var(--light);
 }
 .skills  button{
     height: fit-content;
 }
 .skills input{
     font-size: 1.2rem;
+    color: var(--light);
+}
+.skills input::placeholder{
+    color: var(--lightPlace);
+}
+.skills button {
+    color: var(--red);
+    background-color: var(--cream);
+    box-shadow: var(--grey2) 3px 3px 0 0;
+}
+
+.skills .deletebtn{
+    background-color: var(--red);
+    color: var(--cream);
 }

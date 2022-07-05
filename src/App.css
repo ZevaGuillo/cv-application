@@ -1,5 +1,32 @@
+:root{
+  --black: #0D0D0D;
+  --red: #BF6550;
+  --cream: #D9A679;
+  --grey: #595654;
+  --grey2: #777471;
+  --light: #EBF1F2;
+  --lightPlace: #ebf1f27c;
+  --radius: 10px;
+}
+
+body{
+  background-color: var(--light);
+}
+
 .App {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--black);
+}
+.App h1{
+  user-select: none;
+  color: var(--cream);
+  font-family: 'Philosopher', sans-serif;
+  font-size: 3rem;
+}
+h1 span{
+  color: var(--red);
+  font-size: 3.5rem;
 }
 
 .formcv{
@@ -10,8 +37,11 @@
   gap: 2rem;
 }
 .border{
-  margin: 1rem 5%;
-  border: 1px solid black;
+
+  margin: 1rem 10%;
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  box-shadow: rgba(15, 15, 15, 0.7) 10px 10px
 }
 .cv{
   padding: 2rem;
@@ -40,4 +70,78 @@ textarea {
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
+}
+
+
+
+/* CSS */
+button {
+  appearance: button;
+  background-color: var(--cream);
+  background-image: none;
+  border: 1px solid var(--cream);
+  border-radius: 4px;
+  box-shadow: var(--light) 4px 4px 0 0,var(--cream) 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: var(--red);
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+button:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+button:not([disabled]):active {
+  box-shadow: var(--black) 2px 2px 0 0, var(--black) 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+.print{
+  font-size: 2rem;
+  padding: .5rem 1.5rem;
+}
+
+.attribution{
+  padding: 1rem 0;
+}
+
+.attribution a{
+  text-decoration: none;
+  color: var(--red);
+}
+
+body::-webkit-scrollbar-corner{
+  display: none;
+}
+
+body::-webkit-scrollbar{
+  width:5px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+  border: 3px solid var(--cream);
+  background: var(--cream);
+  border-radius: 10px;
+}
+
+
+body::-webkit-scrollbar-track{
+  background: var(--black);
+  border-radius: var(--radius);
 }

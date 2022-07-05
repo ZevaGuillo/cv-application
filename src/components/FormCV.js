@@ -11,7 +11,7 @@ import Skills from "./Skills";
 function FormCV() {
   const [activeButton, setActiveButton] = React.useState(true);
   const componentRef = React.useRef(null);
-  const setPromiseResolve = React.useRef(null);
+  let setPromiseResolve = React.useRef(null);
 
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -36,7 +36,7 @@ function FormCV() {
 
   return (
     <div className="formcv">
-      <button onClick={handlePrint}>Print this out!</button>
+      <button className="print" onClick={handlePrint}><i class="fas fa-print"></i></button>
 
       <div className="border">
         <div className="cv" ref={componentRef}>
